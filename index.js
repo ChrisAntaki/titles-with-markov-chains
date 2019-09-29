@@ -28,7 +28,7 @@ class App extends Component {
   }
 
   onUpdate = (e) => {
-    const samples = e.target.value.split('\n');
+    const samples = e.target.value.split('\r\n');
     this.setState({ samples }, () => {
       this.regenerate();
     });
@@ -56,7 +56,7 @@ class App extends Component {
         Title generator with markov chains
         </p>
         <textarea
-          value={this.state.samples.join('\n')}
+          value={this.state.samples.join('\r\n')}
           onChange={this.onUpdate}
         >
         </textarea>
